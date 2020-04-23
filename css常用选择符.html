@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>CSS常用选择器（符）</title>
+		<style>
+			/* 1.html选择符 */
+			h1{color: red;}
+			h2{color: #008000;}
+			/* 2.class类选择符 */
+			.b{color:blue;}
+			div.a{color: #00FFFF;}
+			/* 3.id选择符号 */
+			#three{color: red;}
+			/* 4.关联选择符 */
+			span h4{color: blueviolet;}
+			/* 5.组合选择符,以逗号隔开 */
+			h1,h2,h3,h4{background-color: cadetblue;}
+			/* 6.状态类伪类选择符 */
+			a:link{color: #FF0000;text-decoration: none;} /* 未访问的链接*/
+			a:visited {color: #00FF00; text-decoration:none} /* 已访问的链接 */
+			a:hover {color:  #FF00FF; text-decoration:none} /* 鼠标在链接上*/
+			a:active {color: #0000FF; text-decoration: underline;} /* 激活链接 */
+			a:focus {background-color: #0000FF;} /*设置元素在其获取焦点时的样式*/
+			:target{background-image: url(home.jpg);} /*指向相关url的E元素*/
+			:enabled{font-weight: bold;} /*匹配用户界面上处于可用状态的元素*/
+			:disabled{font-family: "楷体";}  /* 匹配用户界面处于禁用的状态的元素*/
+			input:checked{height: 30px;width: 30px;}  /*匹配用户界面处于选中状态的元素*/
+			:a {background-color: #0000FF;background-image: url(home.jpg);} 
+			:not(p){font-style: italic;} /*匹配不含有p选择符的元素*/
+			::selection{color: #FF0000;}  /*选择器匹配元素中被用户选中或处于高亮状态的部分*/
+			
+			
+			/* CSS3中的选择器 */
+			/* 7.关系选择器 */
+			div>p {background-color: cadetblue;} /*选择所有子元素*/
+			div+p {color: gold;} /*div之后的p元素*/
+			div~p {font-size: 30px;background-color: aquamarine;}
+			/*8.属性选择器*/
+			[class] {color: #0000FF;}  /*针对具有class属性的标签*/
+			[class="d"] {color: #008000;} /*针对具有属性class="d"的标签*/
+			[class~="f"] {color: #8A2BE2;} /*针对属性class包含f的标签*/
+			[class|="kiv"] {color: #FF00FF;} /*针对属性class以kiv开头的标签，且以-连接字符串*/
+			[class^="xiao"] {color: #7FFFD4; font-size: 30px;} /*针对属性class以xiao开头的标签*/
+			[class$="ang"] {color: #5F9EA0;} /*针对属性class以ang结尾的标签*/
+			[class*="ic"] {color: #CD5C5C;font-size: 20px;}  /*针对属性class中包含ic的标签*/
+			/* 9.结构性伪类选择器*/
+			ul::first-letter {color: #0000FF;} /*针对对象内的第一个字符*/
+			ul::first-line {font-size: 20px;} /*针对对象内的第一行元素*/
+			.mui label::before{content: ":";} /*设置在对象之前发生的内容*/
+			.mui label::after{content: "：是";} /*设置在对象之前发生的内容*/
+			ul li:first-of-type{color: #FF0000;} /*匹配同类型中的第一个同级兄弟元素*/
+			ul li:last-of-type{color: #008000;} /*匹配同类型中最后一个同级兄弟元素*/
+			ol li:only-of-type{background: url(home.jpg);} /*配同类型中唯一的一个同级兄弟级元素*/
+			ol li:only-child{font-size: 30px;} /*匹配父元素仅有的一个子元素*/
+			ol li:nth-child(2){background: url(home.jpg);} /*匹配父元素的第2个元素*/
+			ol li:nth-last-child(3){background-color: #5F9EA0;} /*匹配同类型中的倒数第n个同级兄弟元素*/
+			ol li:last-child{background-color: #CD5C5C;} /*匹配父元素的最后一个子元素*/
+			:root{background-color: antiquewhite;} /* 匹配元素在文档的根元素。在HTML中，根元素永远是HTML*/
+			:empty{background-image: url(qiao.jpg);} /* 匹配没有任务子元素（包括text节点）的元素*/
+
+		</style>
+	</head>
+	<body>
+		<h1>html选择符1</h1>
+		<h2>html选择符2</h2>
+		<div class="a">
+			类选择符1
+		</div>
+		<div class="b">
+			类选择符2
+		</div>
+		<p class="a">
+			类选择符3
+		</p>
+		<p class="b">
+			类选择符4
+		</p>
+		<div id='three'>
+			id选择符
+		</div>
+		<span>
+			<h4>关联选择符1</h4>
+			<h5 id='text'>关联选择符2222</h5>
+		</span>
+		<div>
+			<h1>状态伪类选择器</h1>
+			<a href="https://www.baidu.com" id="bd">百度</a><br />
+			<a href="https://www.taobao.com" id="tb" disabled="True">淘宝</a><br>
+			<a href="https://www.jd.com">京东</a><br />
+			<a href="https://www.csdn.net/">CSDN</a><br />
+			<a href="http://www.dangdang.com/">当当</a><br>
+			<a href="#text">跳转到上面内容</a>
+			<input type="button" value="按钮" disabled="disabled"/>
+		</div>
+		<div>
+			<p>第一段文字</p>
+			<p>第二段文字</p>
+			<p>第三段文字</p>
+		</div>
+		<p>div之后的p元素</p>
+		<p>div之后的兄弟元素</p>
+		<h3>属性选择器</h3>
+		<div>
+			<span class = "c" >针对有class属性的标签</span><br>
+			<span class="d">针对class属性="d"的标签</span><br>
+			<span class="e f g">针对class属性包含f的标签</span><br>
+			<span class="kiv-lable">针对class属性以kiv开头的标签</span><br>
+			<span class="xiao-li">针对class属性以xiao开头</span><br />
+			<span class="zhang">正对class属性以ang结尾的标签</span><br>
+			<span class="chicken">针对class属性中包含ic元素的标签</span><br>
+		</div>
+		<hr>
+		<h3>结构性伪类选择器</h3>
+		<ul>
+			<li>无序列表1</li>
+			<li>无序列表2</li>
+		</ul>
+		<div class="mui">
+			<label>是否为单身</label><br>
+		</div>
+		<div>
+			<label>是否为土豪</label>
+		</div>
+		<ul>
+			<li>无序列表1</li>
+			<li>无序列表2</li>
+			<li>无序列表3</li>
+			<li>无序列表4</li>
+		</ul>
+		<ol>
+			<li>有序列表1</li>
+		</ol>
+		<ol>
+			<li>有序列表2</li>
+			<li>有序列表3</li>
+			<li>有序列表4</li>
+		</ol>
+		<iframe width="400" ></iframe>
+		<form action="1.html" method="post">
+			<input name="sex" type="radio" value="男" checked="checked" />男
+			<input name="sex" type="radio" value="女" />女
+		</form>
+		
+	</body>
+</html>

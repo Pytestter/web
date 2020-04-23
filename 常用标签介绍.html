@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>网页标题</title>
+		<link type="text/css" rel="stylesheet" href="**.css" />
+		<script></script>
+	</head>
+	<body>
+			<span>
+				<h1>文本标签</h1>
+				<h1>一级标题</h1>
+				<h2>二级标题</h2>
+				<h3>三级标题</h3>
+				<i>斜体</i><br><br>
+				
+				<em>强调斜体</em><br><br>
+				<b>加粗</b><br><br>
+				<strong>强调加粗</strong><br><br>
+				<cite>作品的标题（引用）</cite><br><br>
+				H<sub>2</sub>O 水-下标<br><br>
+				O<sup>2</sup> 氧气-上标<br><br>
+				<del>删除线</del><br><br>
+			</span>
+			<hr />
+			<div name="代码块">
+				<span>
+					<h1>格式化标签</h1>
+					<a id='a1'>我在此处埋了一个点</a>
+					换行<br />
+					<P>这是第一段文字</P>
+					<P>这是第二段文字</P>
+					<hr>水平分割线
+					<ul>
+						<li>无序列表项1</li>
+						<li>无序列表项2</li>
+						<li>无序列表项3</li>
+						<li>无序列表项4</li>
+					</ul>
+					<ol>
+						<li>有序列表项1</li>
+						<li>有序列表项2</li>
+						<li>有序列表项3</li>
+						<li>有序列表项4</li>
+						<li>有序列表项5</li>
+					</ol>
+					<dl>
+						<dt>自定义列表头</dt>
+						<dd>自定义列表项</dd>
+					</dl>
+				</span>
+			</div >
+			<hr />
+			<div>
+				<h1>图片标签</h1>
+				<img src="./wuhan.jpg" alt="图片加载失败" title="武汉" width="400" height="200" border="0"/>
+			</div>
+			<hr>
+			<div>
+				<h1>超链接标签</h1>
+				<a href="http://www.baidu.com" target="_blank">百度</a>
+				<a href="#a1">跳转到a1处</a>
+			</div>
+			<hr>
+			<div>
+				<h1>表格标签</h1>
+				<table border="1" cellpadding="0" cellspacing="0" >
+					<caption>学生信息表</caption>
+					<thead>
+						<tr >
+							<th>姓名</th>
+							<th>年龄</th>
+							<th>性别</th>
+							<th>班级</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>张三</td>
+							<td>20</td>
+							<td colspan="2">男</td>
+							<!-- <td>高三一班</td> -->
+						</tr>
+						<tr>
+							<td>李四</td>
+							<td>25</td>
+							<td rowspan="2">女</td>
+							<td>高三二班</td>
+						</tr>
+						<tr>
+							<td>王五</td>
+							<td>28</td>
+							<!-- <td>女</td> -->
+							<td>高三三班</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<hr/>
+			<div>
+				<h1>form表单</h1>
+				<form action="#" method="post" enctype="multipart/form-data" target="_blank" name="我的表单">
+					<h2>input标签项</h2>
+					单行文本框：<input type="text" /> <br />
+					密码输入框：<input type="password" /><br>
+					<h3>多选框</h3>
+					<input type="checkbox" value="起床">起床
+					<input type="checkbox" value="洗漱">洗漱
+					<input type="checkbox" value="吃早饭">吃早饭 <br>
+					<h3>单选框,name保持一样，二选一</h3>
+					性别：<input name="sex" type="radio" value="男" checked="checked" />男<input name="sex" type="radio" value="女" />女
+					<h3>文件上传选择框</h3>
+					<input type="file" /><br />
+					<input type="button" value="普通提交按钮" disabled="disabled" /><br />
+					<input type="submit" value="提交按钮" /><br />
+					<input type="image" value="图片提交按钮" src="./wuhan.jpg" alt="武汉" width="500" height="400">图片提交按钮<br /> 
+					<input type="reset" value="重置" ><br />
+					<input type="hidden" value="主表单隐藏域" /><br />
+					email: <input type="email" placeholder="请输入email" size="30" maxlength="20" /><br />
+					url  : <input type="url" name="url" readonly="readonly" value="只读"/><br />
+					<h3>数字输入框</h3>
+					number: <input type="number" max="10" min="1" step="2" value="1"/><br />
+					<h3>包含一定范围的数字输入域</h3>
+					range number:<input type="range" max="100" min="1" step="3" value="1"/>
+					<h3>日期选择器</h3>
+					<input type="date" /> 年月日<br />
+					<input type="month" /> 年月<br />
+					<input type="week" /> 年周<br />
+					<input type="time"> 小时和分钟<br />
+					<input type="datetime" />时间、日、月、年<br />
+					<input type="datetime-local" />本地时间<br />
+					<h3>搜索域</h3>
+					<input type="search" /><br />
+					<h3>颜色</h3>
+					<input type="color"  />
+					<hr />
+					<h2>创建下拉列表</h2>
+					<select name="爱好" >
+						<option value="打篮球" >打篮球</option>
+						<option value="看书" selected="selected">看书</option>
+						<option value="唱歌" >唱歌</option>
+					</select>
+					<h2>多行文本输入区域</h2>
+					<textarea name="文本框" rows="10" cols="50"></textarea> <br />
+					<button>确定</button>   <button>取消</button>
+				</form>
+				<h2>将form表单内的元素包装起来，再一个方框中</h2>
+				<form>
+					<fieldset>
+						<legend>个人信息</legend>
+						姓名：<input type="text" />
+						年龄：<input type="text" />
+					</fieldset>
+					<br><br>
+					<fieldset>
+						<legend>健康信息</legend>
+						身高：<input type="text" />
+						体重：<input type="text" />
+					</fieldset>
+				</form>
+				<form>
+					<h2>标签定义选项</h2>
+					<optgroup label="河北省">
+						<option>石家庄</option>
+						<option>保定</option>
+						<option>廊坊</option>
+					</optgroup>
+					<optgroup label="河南省">
+						<option>郑州</option>
+						<option>安阳</option>
+						<option>周口</option>
+					</optgroup>
+				</form>
+				<form action="demo_form.php" method="get">
+					<h2>标签定义可选数据，与input配合使用</h2>
+					搜索：
+					<input type="search" list="namelist" name="keywords" />
+					<datalist id="namelist">
+						<option value="zhangsan">
+						<option value ="zhangsanfeng">
+						<option value ="zhangwuji">
+						<option value ="lisi">
+						<option value ="lixiaolong">
+					</datalist>
+				</form>
+			</div>
+			<hr />
+			<h3>行内框架</h3>
+			<a href="1.html" target="myframe" >页面1</a><br>
+			<a href="2.html" target="myframe" >页面2</a><br>
+			<a href="3.html" target="myframe" >页面3</a><br>
+			<iframe src="1.html" name="myframe" width="700" height="500">
+				
+			</iframe>
+			<hr />
+			<h3>多媒体标签--了解即可</h3>
+			<audio src="./images/beidahuang.mp3" controls="controls">
+				你的浏览器不支持不妨
+			</audio>
+			<br /><br />
+			
+			<video controls="controls" width="400" height="400">
+				<source src="./images/fun.mp4" type="video/mp4"></source>
+				<source src="movie.webm" type="video/webm"></source>
+				你的浏览器不支持视频播放
+			</video>
+			
+			<video controls loop poster="tiao.jpg">
+				<source src="movie.webm" type="video/webm"></source>
+				<source src="movie.ogg" type="video/ogg"></source>
+				<source src="movie.mp4" type="video/mp4"></source>
+				您的浏览器该还了，不支持视频标签
+			</video>
+			
+			
+	</body>
+</html>
